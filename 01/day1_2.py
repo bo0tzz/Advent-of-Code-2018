@@ -9,6 +9,6 @@ def find_first_reached_twice(lines):
             reached_frequencies.add(counter)
 
 
-with open('../in.txt') as puzzle_input:
+with open('in.txt') as puzzle_input:
     res = find_first_reached_twice(puzzle_input.readlines())
     print(res)
