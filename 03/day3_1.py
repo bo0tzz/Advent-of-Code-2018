@@ -6,7 +6,7 @@ def claim(s: list, x: int, y: int, width: int, height: int):
     for h in range(y, y + height):
         r = s[h]  # The row we operate on
         for w in range(x, x + width):
-            r[w] = r[w] + 1
+            r[w] += 1
     return s
 
 
