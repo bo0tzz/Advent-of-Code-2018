@@ -19,9 +19,13 @@ def process_reactions(l: str):
     return out
 
 
+def fully_react(polymer: str):
+    result = process_reactions(polymer)
+    while len(polymer) != len(result):
+        polymer, result = result, process_reactions(result)
+    return result
+
+
 with open('in.txt') as puzzle_input:
-    processing = puzzle_input.readline()
-    result = process_reactions(processing)
-    while len(processing) != len(result):
-        processing, result = result, process_reactions(result)
-    print(len(result))
+    out = fully_react(puzzle_input.readline())
+    print(len(out))
