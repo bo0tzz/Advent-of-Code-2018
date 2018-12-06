@@ -1,4 +1,3 @@
-import operator
 from collections import namedtuple
 
 bounds_tpl = namedtuple('boundaries', 'lower_x lower_y upper_x upper_y')
